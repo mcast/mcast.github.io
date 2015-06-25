@@ -1,0 +1,10 @@
+---
+baseurl: /web.mcra
+timezone: GB
+highlighter: pygments
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      author: "Matthew Astley"
