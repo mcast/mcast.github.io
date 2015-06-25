@@ -1,0 +1,5 @@
+<ul class="pages">
+  {% for page in site.pages %}
+    <li> &raquo; <a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></li>
+  {% endfor %}
+</ul>
