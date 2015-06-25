@@ -1,5 +1,5 @@
 ---
-baseurl: /web.mcra
+# baseurl: /web.mcra  # for mcast.github.io/web.mcra/ but not http://mcra.t8o.org/
 timezone: GB
 highlighter: pygments
 defaults:
