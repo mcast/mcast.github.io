@@ -8,3 +8,8 @@ defaults:
       path: ""
     values:
       author: "Matthew Astley"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
