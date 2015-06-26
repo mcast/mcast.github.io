@@ -10,23 +10,18 @@ Last time [I had web pages](http://www.t8o.org/~mca1001/), it was cool to write 
 * CSS was the modern way
 * Some CGI scripts (for the fancy stuff)
 * [CVS](https://en.wikipedia.org/wiki/Concurrent_Versions_System) backed to preserve my changes (and my sanity, so I thought at the time)
-* Serve it off the broadband from the old desktop box under the stairs
+* Serve it with Apache, from the old desktop box under the stairs, down the rather asymmetric cablemodem
 * A vague intention to [make it clean](https://validator.w3.org/)
 
-That website is still up, moved to a [Bytemark](https://www.bytemark.co.uk/)
-small VM, but mostly untouched for many years.  The CVS repository
-never made it into Git and what I wanted to tell the world fitted OK
-as a [contribution to some other service](/about.html).
+That website is still up, moved to a [Bytemark](https://www.bytemark.co.uk/) small VM, but mostly untouched for many years.  The CVS repository never made it into Git and what I wanted to tell the world fitted OK as a [contribution to some other service](/about.html).
 
 ## Website refresh
 
-Here I say "choosing" rather than "designing" or "building".  My
-vapourware queue already exceeds my allotted CPU cycles.
+Here I say "choose" rather than "design" or "build".  My vapourware queue already exceeds my allotted CPU cycles.
 
 ### Static is cool
 
-Static blogs make a lot of sense, this has been clear to me for some
-years now.  But which?
+Static blogs make a lot of sense, this has been clear to me for some years now.  But which?
 
 * Choose by features, implementing language, or just popularity?
 * For the less obscure ones, choose the clone-and-go blog template pack, which probably brings some "themes".
@@ -34,7 +29,7 @@ years now.  But which?
 
 {% include div-WiP.html %}
 
-### Choosing the engine
+### Choose the engine
 
 I use [Github](https://github.com) already.  It has [Github Pages](https://pages.github.com/).
 
@@ -43,9 +38,11 @@ Maybe I don't want to be tied to Github forever?
 * I will CNAME it to my own URL anyway.
 * I could serve it off my own webserver...  haven't been Slashdotted yet, it'll be fine.
 * I could run the Jekyll generator myself, or ask [Travis CI](https://travis-ci.com/) to do it for me.
-	* There is the `github-pages` gem to [get the correct versions of everything](http://jekyllrb.com/docs/github-pages/#deploying-jekyll-to-github-pages).
+	* There is the [`github-pages` gem](https://github.com/github/pages-gem#list-dependency-versions) to [get the correct versions of everything](http://jekyllrb.com/docs/github-pages/#deploying-jekyll-to-github-pages).
 
-### Choosing the styling
+So the only tie is convenience, or lack of some feature I don't yet know I want.  Ask again in five years?
+
+### Choose the styling
 
 [Old school](https://en.wikipedia.org/wiki/Old_school#Computers_and_gaming)
 [angry fruit salad](http://www.catb.org/jargon/html/A/angry-fruit-salad.html),
@@ -53,28 +50,55 @@ what's not to like?
 
 I'll start writing content.  I could change the CSS later if I wanted.
 
-### Choosing the markup
+### Choose the markup
+
+* HTML is still a valid choice
+	* The obvious choice for the layouts
+	* The escape hatch for tricky articles
 * [Markdown](http://daringfireball.net/projects/markdown/) looks like the defacto standard, and is easy enough for prose.
-	* Is that [GFM](https://help.github.com/articles/github-flavored-markdown/), [Kramdown](http://kramdown.gettalong.org/syntax.html) or...?
+	* Is that [GFM](https://help.github.com/articles/github-flavored-markdown/) or some other dialect?
 	* Do I want to use another language with [so much](http://www.adamhyde.net/whats-wrong-with-markdown/) [undefined behaviour](http://www.wilfred.me.uk/blog/2012/07/30/why-markdown-is-not-my-favourite-language/)?
+	* Works on Github Pages, so is the sensible choice there.
+	* I don't like the dialect issues
 * Several people recommended [HAML](http://haml.info/) to me.
-	[ ] "Give myself 5 minutes" to learn it.
-	[ ] Shoe-horn it into Jekyll.
+	* [ ] "Give myself 5 minutes" to learn it.
+	* [ ] Shoe-horn it into Jekyll?
 * [WikiCreole](http://www.wikicreole.org/wiki/Implementation) is already familiar.
+* [ ] Org-mode is supported by Jekyll and GitHub in general, but not Github Pages.  I could ask.
 
-I can choose markup language per layout/article/inclusion, within the
-ghpages constraints.  Markdown is good enough for now.
+I can choose markup language per layout/article/inclusion, within the ghpages constraints.  Markdown is good enough for now.
 
-### Choosing the markdown renderer
+### Choosing the markdown renderer {% include H-WiP.html %}
 
-This is less easy because it is a global choice for all `.md` articles
-in the site.
+I took the list of renderers to try from the [pages-gem](https://github.com/github/pages-gem/blob/master/lib/github-pages.rb) source.  After the first pass of evaluation I discovered that some take a list of extension flags.
 
-* the ghpages default (what is that?) doesn't render triple-backtick code blocks.
-* rdiscount renders the triple-backticks, but isn't calling pygments for syntax highlighting.
-* [ ] kramdown
+* maruku [was used for Github Pages](https://help.github.com/articles/migrating-your-pages-site-from-maruku/) but [is obsolete](http://benhollis.net/blog/2013/10/20/maruku-is-obsolete/)
+* rdiscount
+	* Renders triple-backticks, with a class for the language.
+	* Doesn't call pygments for syntax highlighting?
+	* Doesn't render pipe tables, header `{#id}` marks, attribute lists `{: foo=bar}` of any sort.
+	* Doesn't understand `*[abbr]: abbreviation definition` blocks.
+* redcarpet
+	* Used for [github/markup](https://github.com/github/markup#markups) (2015-06-26)
+	* [Can do GFM](http://stackoverflow.com/questions/13464590/github-flavored-markdown-and-pygments-highlighting-in-jekyll)
+	* Jekyll docs [were updated](https://github.com/jekyll/jekyll/pull/1418) with relevant extension info.
+	* Doesn't render header `{#id}` marks or attribute lists `{: foo=bar}`
+	* Does put id tags on headers in case you have (DIY?) TOC.
+	* Footnote definitions bring their own `<hr>`
+* RedCloth
+	* Looks similar to redcarpet with extensions switched off..?
+	* Broke the build for syntax error in `#excerpt`
+* kramdown - the current (2015-06) default markdown render
+	* Renders pipe tables
+	* Doesn't render triple-backtick code blocks out of the box
+	* For GFM, configure `{ kramdown => { input => 'GFM' } }`.  [Thanks Milan!](http://milanaryal.com/2015/writing-on-github-pages-and-jekyll-using-markdown/#for-kramdown-markdown)
 
-Maybe I should take diffs of the HTML when I switch?
+This was not a comprehensive survey or a thorough test, but it is clear to me that
+
+* one should should take diffs of the HTML outputs when considering switching
+* the choice is Kramdown's GFM or a configured Redcarpet.
+
+From the config, it looks like each article could choose the renderer, but Jekyll 2.4.0 ignores it.  `_config.yml` sets the **global choice** for all `.md` articles in the site.
 
 ### URLs are for life, not just for Christmas
 
