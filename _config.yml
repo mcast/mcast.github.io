@@ -1,7 +1,6 @@
 ---
 # baseurl: /web.mcra  # for mcast.github.io/web.mcra/ but not http://mcra.t8o.org/
 timezone: GB
-highlighter: pygments
 defaults:
   -
     scope:
@@ -15,3 +14,11 @@ defaults:
       layout: post
 gems:
   - jekyll-redirect-from
+
+highlighter: pygments
+pygments: true
+markdown: redcarpet
+
+# from https://github.com/vmg/redcarpet#and-its-like-really-simple-to-use and wild examples
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "disable_indented_code_blocks", "space_after_headers", "tables", "with_toc_data", "strikethrough", "superscript", "underline", "highlight", "footnotes", "hard_wrap" ]
