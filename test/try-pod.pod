@@ -1,0 +1,33 @@
+---
+title: Try Plain Old Documentation (pod)
+---
+
+=head1 NAME
+
+{{ page.title }}
+
+=head1 DESCRIPTION
+
+It is quite a neat and well-defined little documentation markup, but
+I'm not sure I want to write a whole blog with it.
+
+=head2 Details
+
+If there were some.
+
+=over 4
+
+=item * List items
+
+Are nicely delimited.
+
+=item * Furthermore
+
+ They can contain
+ preformatted text
+ which      should
+ render      right.
+
+=back
+
+=cut

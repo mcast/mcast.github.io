@@ -1,6 +1,6 @@
 ---
-title: Try Everything
-layout: post
+title: Try Markdown
+layout: default
 category: test silly everything
 tags: sillier test
 published: true
@@ -8,6 +8,11 @@ date: 2015-06-27
 redirect_from: /come-from
 permalink: xmastree-post.html
 ---
+
+# Try Markdown
+
+A non-comprehensive selection of Markdown constructs, to see how they
+render with the current `_config.yml`.
 
 ## Switch on all the options to see what happens
 {:title="attr test heading" style="background: yellow"}
@@ -64,7 +69,7 @@ nothing
 
 ---
 
-To **boldly** split infinitives.
+To **boldly** split infinitives and ~~strikethrough~~ other text.
 
 [^1]: usually code gets longer by growing in the editor window,
   but it can also get longer when the compression comes unravelled.

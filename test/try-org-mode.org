@@ -1,0 +1,14 @@
+---
+title: Try org-mode document
+---
+
+** Does it work?
++ Good
+  + Excellent support from Emacs
+  + I use it already
+  + No dialect issues (that I'm aware of)
++ Bad
+  + No ```triple backtick``` code blocks
+
+** Problems to research
++ [ ] How do I set class etc. on the generated HTML?
