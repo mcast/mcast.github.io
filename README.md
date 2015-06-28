@@ -8,8 +8,7 @@ holds my [blog and related web pages](http://mcra.t8o.org/).
 ## Upstream Rebase Alert
 
 Git history will be revised, rebased or otherwise force-pushed when I
-feel like it.  If you're branching for some reason 😕, <!-- emoji here -->
-talk first.
+feel like it.  If you're branching for some reason, talk first.
 
 ## Copying
 
