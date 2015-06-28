@@ -15,10 +15,12 @@ defaults:
 gems:
   - jekyll-redirect-from
 
-highlighter: pygments
-pygments: true
-markdown: redcarpet
+# thanks http://milanaryal.com/2015/writing-on-github-pages-and-jekyll-using-markdown/#for-kramdown-markdown
+markdown: kramdown
+kramdown:
+  input: GFM
 
 # from https://github.com/vmg/redcarpet#and-its-like-really-simple-to-use and wild examples
+#markdown: redcarpet
 redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "disable_indented_code_blocks", "space_after_headers", "tables", "with_toc_data", "strikethrough", "superscript", "underline", "highlight", "footnotes", "hard_wrap" ]
