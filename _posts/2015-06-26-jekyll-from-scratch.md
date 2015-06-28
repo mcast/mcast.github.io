@@ -32,7 +32,7 @@ years now.  But which?
 * For the less obscure ones, choose the clone-and-go blog template pack, which probably brings some "themes".
 [ ] Link a few, once I remember where I stashed that research.
 
-{% include WiP.html %}
+{% include div-WiP.html %}
 
 ### Choosing the engine
 
