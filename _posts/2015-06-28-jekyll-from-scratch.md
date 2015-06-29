@@ -96,7 +96,7 @@ I took the list of renderers to try from the [pages-gem](https://github.com/gith
 This was not a comprehensive survey or a thorough test, but it is clear to me that
 
 * one should should take diffs of the HTML outputs when considering switching
-* the choice is Kramdown's GFM or a configured Redcarpet.
+* the choice is between [Kramdown's GFM](/test/xmastree-post.kramdown.html) or a [configured Redcarpet](/test/xmastree-post.redcarpet.html) - I took these snapshots of [my test page](/xmastree-post.html) for comparison.
 
 From the config, it looks like each article could choose the renderer, but Jekyll 2.4.0 ignores it.  `_config.yml` sets the **global choice** for all `.md` articles in the site.
 

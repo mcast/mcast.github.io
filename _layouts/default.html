@@ -4,10 +4,16 @@
 <title>{{ page.title }}</title>
 <style type="text/css">
 div.box-wip {
-  border: 3px orange solid;
-  margin: 0.5ex;
+  border-color: orange;
   padding: 2em;
   background-color: #ffc880;
+}
+
+.divbox { /* for div.divbox, but lower priority */
+  border-width: 3px;
+  border-style: solid;
+  margin: 0.5ex;
+  padding: 0.5ex;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
