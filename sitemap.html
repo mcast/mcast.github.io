@@ -1,12 +1,18 @@
 ---
+layout: base
 title: List all pages
 ---
 
 <div>
   <h1>{{ page.title }}</h1>
+  <p> List of all generated pages on the site.  (Excluding content which doesn't have the YAML frontmatter marks.) </p>
   <h2>Posts</h2>
   {% include ul--posts.html %}
 
   <h2>Pages</h2>
   {% include ul--pages.html %}
+
+  <h2> Categories and Tags </h2>
+  {% include div-WiP.html %}
+  Not yet indexed.
 </div>

@@ -102,9 +102,7 @@ From the config, it looks like each article could choose the renderer, but Jekyl
 
 ### URLs are for life, not just for Christmas
 
-It has been true [since 1998](http://www.w3.org/Provider/Style/URI.html)
-and the slogan is [not new](https://oracle-base.com/blog/2015/05/25/writing-tips-a-url-is-for-life-not-just-for-christmas/),
-but still one sees those 404s.
+It has been true [since 1998](http://www.w3.org/Provider/Style/URI.html) and the slogan is [not new](https://oracle-base.com/blog/2015/05/25/writing-tips-a-url-is-for-life-not-just-for-christmas/), but still one sees those 404s.
 
 I have old content on old URLs.  It is still there.
 
@@ -117,12 +115,9 @@ I started with a blank sheet and wrote my own page templates.  I guess
 none of the templates I saw already looked like the kind of clothing I
 like to wear.
 
-[X] [home](/index.html), [about](/about.html), [sitemap](/sitemap.html) and custom [404](/404.html).
-[ ] RSS / atom.xml, link from &lt;head>
-[ ] [humans.txt](http://humanstxt.org/)
-[ ] [robots.txt](http://www.robotstxt.org/)
-[ ] [sitemap manifest](https://en.wikipedia.org/wiki/Sitemaps)
-[ ] README.md, for the Github repo view
+Every website is different[^1], but many have common features that people come to expect.  Mine lacks many of them, but I might try to [enumerate them](/website-wants) as I go.
+
+*[^1]: Pedantry: except the splog of course.
 
 ### Blog about it
 
