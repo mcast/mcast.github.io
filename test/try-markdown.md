@@ -1,6 +1,6 @@
 ---
 title: Try Markdown
-layout: default
+layout: page
 category: test silly everything
 tags: sillier test
 published: true
