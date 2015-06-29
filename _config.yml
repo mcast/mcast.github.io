@@ -12,6 +12,11 @@ defaults:
       type: "posts"
     values:
       layout: post
+  - scope:
+      path: "test"
+      type: "pages"
+    values:
+      categories: "test"
 gems:
   - jekyll-redirect-from
 
