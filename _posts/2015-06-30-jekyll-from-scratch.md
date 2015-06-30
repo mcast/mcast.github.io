@@ -35,18 +35,16 @@ I use [Github](https://github.com) already.  It has [Github Pages](https://pages
 
 Maybe I don't want to be tied to Github forever?
 
-* I will CNAME it to my own URL anyway.
-* I could serve it off my own webserver...  haven't been Slashdotted yet, it'll be fine.
-* I could run the Jekyll generator myself, or ask [Travis CI](https://travis-ci.com/) to do it for me.
+1. I will CNAME it to my own URL anyway.
+2. I could run the Jekyll generator myself, or ask [Travis CI](https://travis-ci.com/) to do it for me.
 	* There is the [`github-pages` gem](https://github.com/github/pages-gem#list-dependency-versions) to [get the correct versions of everything](http://jekyllrb.com/docs/github-pages/#deploying-jekyll-to-github-pages).
+3. I could serve it off my own webserver...  haven't been Slashdotted yet, it'll be fine.
 
 So the only tie is convenience, or lack of some feature I don't yet know I want.  Ask again in five years?
 
 ### Choose the styling
 
-[Old school](https://en.wikipedia.org/wiki/Old_school#Computers_and_gaming)
-[angry fruit salad](http://www.catb.org/jargon/html/A/angry-fruit-salad.html),
-what's not to like?
+[Old school](https://en.wikipedia.org/wiki/Old_school#Computers_and_gaming) [angry fruit salad](http://www.catb.org/jargon/html/A/angry-fruit-salad.html), what's not to like?
 
 I'll start writing content.  I could change the CSS later if I wanted.
 
@@ -59,7 +57,7 @@ I'll start writing content.  I could change the CSS later if I wanted.
 	* Is that [GFM](https://help.github.com/articles/github-flavored-markdown/) or some other dialect?
 	* Do I want to use another language with [so much](http://www.adamhyde.net/whats-wrong-with-markdown/) [undefined behaviour](http://www.wilfred.me.uk/blog/2012/07/30/why-markdown-is-not-my-favourite-language/)?
 	* Works on Github Pages, so is the sensible choice there.
-	* I don't like the dialect issues
+	* I don't like the dialect issues, but I have been known to *locally extend standards* myself sometimes.
 * Several people recommended [HAML](http://haml.info/) to me.
 	* [ ] "Give myself 5 minutes" to learn it.
 	* [ ] Shoe-horn it into Jekyll?
@@ -68,16 +66,17 @@ I'll start writing content.  I could change the CSS later if I wanted.
 
 I can choose markup language per layout/article/inclusion, within the ghpages constraints.  Markdown is good enough for now.
 
-### Choosing the markdown renderer {% include H-WiP.html %}
+### Choosing the markdown renderer
 
 I took the list of renderers to try from the [pages-gem](https://github.com/github/pages-gem/blob/master/lib/github-pages.rb) source.  After the first pass of evaluation I discovered that some take a list of extension flags.
 
 * maruku [was used for Github Pages](https://help.github.com/articles/migrating-your-pages-site-from-maruku/) but [is obsolete](http://benhollis.net/blog/2013/10/20/maruku-is-obsolete/)
-* rdiscount
+* [rdiscount](https://github.com/davidfstr/rdiscount)
 	* Renders triple-backticks, with a class for the language.
 	* Doesn't call pygments for syntax highlighting?
 	* Doesn't render pipe tables, header `{#id}` marks, attribute lists `{: foo=bar}` of any sort.
 	* Doesn't understand `*[abbr]: abbreviation definition` blocks.
+	* I didn't try to [configure it](http://www.rubydoc.info/github/davidfstr/rdiscount/master/RDiscount#constructor_details), but it doesn't seem to offer fenced code blocks anyway.
 * redcarpet
 	* Used for [github/markup](https://github.com/github/markup#markups) (2015-06-26)
 	* [Can do GFM](http://stackoverflow.com/questions/13464590/github-flavored-markdown-and-pygments-highlighting-in-jekyll)
@@ -111,13 +110,11 @@ I have old content on old URLs.  It is still there.
 
 ### Standard things a website should have
 
-I started with a blank sheet and wrote my own page templates.  I guess
-none of the templates I saw already looked like the kind of clothing I
-like to wear.
+I started with a blank sheet and wrote my own page templates.  I guess none of the templates I saw already looked like the kind of clothing I like to wear.
 
 Every website is different[^1], but many have common features that people come to expect.  Mine lacks many of them, but I might try to [enumerate them](/website-wants) as I go.
 
-*[^1]: Pedantry: except the splog of course.
+[^1]: Pedantry: except the splog of course.
 
 ### Blog about it
 
