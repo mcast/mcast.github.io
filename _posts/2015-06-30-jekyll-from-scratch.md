@@ -25,9 +25,8 @@ Static blogs make a lot of sense, this has been clear to me for some years now. 
 
 * Choose by features, implementing language, or just popularity?
 * For the less obscure ones, choose the clone-and-go blog template pack, which probably brings some "themes".
-[ ] Link a few, once I remember where I stashed that research.
 
-{% include div-WiP.html %}
+I did start researching a few of them, but nothing much to report.  There are some comparisons on other blogs.  Then suddenly I was prompted to start afresh (thanks Andy!).
 
 ### Choose the engine
 
@@ -59,10 +58,8 @@ I'll start writing content.  I could change the CSS later if I wanted.
 	* Works on Github Pages, so is the sensible choice there.
 	* I don't like the dialect issues, but I have been known to *locally extend standards* myself sometimes.
 * Several people recommended [HAML](http://haml.info/) to me.
-	* [ ] "Give myself 5 minutes" to learn it.
-	* [ ] Shoe-horn it into Jekyll?
 * [WikiCreole](http://www.wikicreole.org/wiki/Implementation) is already familiar.
-* [ ] Org-mode is supported by Jekyll and GitHub in general, but not Github Pages.  I could ask.
+* Org-mode is supported by Jekyll and GitHub in general, but not Github Pages.  I could ask.
 
 I can choose markup language per layout/article/inclusion, within the ghpages constraints.  Markdown is good enough for now.
 
@@ -82,7 +79,7 @@ I took the list of renderers to try from the [pages-gem](https://github.com/gith
 	* [Can do GFM](http://stackoverflow.com/questions/13464590/github-flavored-markdown-and-pygments-highlighting-in-jekyll)
 	* Jekyll docs [were updated](https://github.com/jekyll/jekyll/pull/1418) with relevant extension info.
 	* Doesn't render header `{#id}` marks or attribute lists `{: foo=bar}`
-	* Does put id tags on headers in case you have (DIY?) TOC.
+	* Does put id tags on headers, for incoming links or if you write a (DIY) TOC.
 	* Footnote definitions bring their own `<hr>`
 * RedCloth
 	* Looks similar to redcarpet with extensions switched off..?
@@ -90,6 +87,7 @@ I took the list of renderers to try from the [pages-gem](https://github.com/gith
 * kramdown - the current (2015-06) default markdown render
 	* Renders pipe tables
 	* Doesn't render triple-backtick code blocks out of the box
+	* Can [generate a TOC (to HTML only?)](http://kramdown.gettalong.org/converter/html.html#toc) with `\n* list is replaced\n{:toc}\n`
 	* For GFM, configure `{ kramdown => { input => 'GFM' } }`.  [Thanks Milan!](http://milanaryal.com/2015/writing-on-github-pages-and-jekyll-using-markdown/#for-kramdown-markdown)
 
 This was not a comprehensive survey or a thorough test, but it is clear to me that
@@ -103,10 +101,7 @@ From the config, it looks like each article could choose the renderer, but Jekyl
 
 It has been true [since 1998](http://www.w3.org/Provider/Style/URI.html) and the slogan is [not new](https://oracle-base.com/blog/2015/05/25/writing-tips-a-url-is-for-life-not-just-for-christmas/), but still one sees those 404s.
 
-I have old content on old URLs.  It is still there.
-
-[ ] Move it.
-[ ] Redirections.
+I have old content on old URLs.  It is still there, for now.
 
 ### Standard things a website should have
 
@@ -136,3 +131,5 @@ At the time I tested it (2015-06),
 * https://*.github.io/ works with a valid certificate, for when it forwards you get plain http://$CNAME/
 * https://$CNAME/ works but the certificate is of course wrong.  Get a proper webserver?
 * With the `$USER.github.io/CNAME` redirection, what happens to projects' `gh-pages` ???
+
+---

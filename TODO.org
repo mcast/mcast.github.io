@@ -1,1 +1,15 @@
+An unordered list.  Another one.  Not referenced from anywhere else.
+(Three problems with this file.)
+
++ tests
+  + [ ] TODO & WiP lister
++ [ ] website-wants/jekyll02.md
 + [ ] vapourware queue
++ Old content
+  + [ ] Move it
+  + [ ] Redirections
++ HAML
+  + [ ] "Give myself 5 minutes" to learn it.
+  + [ ] Shoe-horn it into Jekyll?
++ [ ] Ask ghpages for org-mode support
+  + might pay to benchmark the implementation first
