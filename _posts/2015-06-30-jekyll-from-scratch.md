@@ -26,7 +26,7 @@ Static blogs make a lot of sense, this has been clear to me for some years now. 
 * Choose by features, implementing language, or just popularity?
 * For the less obscure ones, choose the clone-and-go blog template pack, which probably brings some "themes".
 
-I did start researching a few of them, but nothing much to report.  There are some comparisons on other blogs.  Then suddenly I was prompted to start afresh (thanks Andy!).
+I did start researching a few of them, but nothing much to report.  There are some comparisons on other blogs.  Then suddenly I was prompted to start afresh (thanks [Andy](https://github.com/andrewyatz)!).
 
 ### Choose the engine
 
