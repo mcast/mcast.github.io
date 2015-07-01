@@ -24,6 +24,8 @@ defaults:
       categories: "test"
 gems:
   - jekyll-redirect-from
+  - jekyll-sitemap
+# sitemap last, so it sees the ones above
 
 # thanks http://milanaryal.com/2015/writing-on-github-pages-and-jekyll-using-markdown/#for-kramdown-markdown
 markdown: kramdown

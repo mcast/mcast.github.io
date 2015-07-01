@@ -1,0 +1,8 @@
+
+# See http://humanstxt.org
+
+Content is just from me, so far.
+Editors, version control, webservers, content mungers, libraries
+etc. were made by quite a few other people, and so were the turtles
+all the way down to the atoms at the bottom.
+							-- mcra 2015-07-01

@@ -1,0 +1,15 @@
+
+# > Don't put any HTML or English language "Who the hell are you?"
+# > text in it -- it will probably never get read by anyone :-)
+
+# Well, piffle to that.
+
+# See also humans.txt
+
+
+# http://www.sitemaps.org/
+Sitemap: http://mcra.t8o.org/sitemap.xml
+
+User-agent: *
+Disallow: /norobots/nocontent
+
