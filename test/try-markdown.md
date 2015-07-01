@@ -26,10 +26,6 @@ they render with the current
 * And ask for a TOC - kramdown only?
 {:toc}
 
-## Repositories on Github
-{% for repository in site.github.public_repositories %}
-* [{{ repository.name }}]({{ repository.html_url }}){% endfor %}
-
 Code blocks {#code}
 ----
 
