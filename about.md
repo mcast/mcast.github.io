@@ -26,5 +26,3 @@ These are not me, I merely noticed they share a name or handle similar to mine. 
 
 * [Mikel Cast](https://launchpad.net/~mcast)
 
-{% include ul--github-repos.md %}
-
