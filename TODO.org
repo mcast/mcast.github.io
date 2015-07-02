@@ -3,6 +3,7 @@ An unordered list.  Another one.  Not referenced from anywhere else.
 
 + tests
   + [ ] TODO & WiP lister
+  + [ ] dangling internal links (wanted page)
 + [ ] website-wants/jekyll02.md
 + [ ] vapourware queue
 + Old content
@@ -13,3 +14,4 @@ An unordered list.  Another one.  Not referenced from anywhere else.
   + [ ] Shoe-horn it into Jekyll?
 + [ ] Ask ghpages for org-mode support
   + might pay to benchmark the implementation first
++ [ ] HTTP Last-Modified: time to match sitemap.xml
