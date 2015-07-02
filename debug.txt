@@ -1,0 +1,10 @@
+---
+layout: null
+---
+#! /usr/bin/env ruby
+require "psych"
+
+d = {"pages"=>[ {% for o in site.pages %}{% unless o == page %}{{ o }},
+{% endunless %}{% endfor %} ] }
+
+print Psych.dump(d)
