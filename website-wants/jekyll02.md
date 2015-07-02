@@ -1,10 +1,8 @@
 ---
 title: Things a Jekyll website wants (part 2)
 tags: metablog
-unpublished: true
+published: false
 ---
-
-(It is marked `unpublished: true` but that isn't working for pages?  Never mind.)
 
 Things I haven't added, but probably will
 
