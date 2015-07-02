@@ -7,6 +7,7 @@ use DateTime::Format::DateParse;
 
 
 our $AUTO_MARK = '(auto) update by fix-dates.pl';
+our $FIELD = 'last_modified_at';
 
 sub main {
   my $cdup = qx{ git rev-parse --show-cdup };
@@ -58,11 +59,11 @@ sub main {
       $file{$fn} = 'no frontmatter'; # for debug dump
       next;
     }
-    my ($date) = $frontmatter =~ m{^date:\s*(.*)\n}m;
-    $date = DateTime::Format::DateParse->parse_datetime($date)
-      if defined $date;
-    if ($date) {
-      my $diff = $info->{dt}->subtract_datetime($date);
+    my ($lastmod) = $frontmatter =~ m{^$FIELD:\s*(.*)\n}m;
+    $lastmod = DateTime::Format::DateParse->parse_datetime($lastmod)
+      if defined $lastmod;
+    if ($lastmod) {
+      my $diff = $info->{dt}->subtract_datetime($lastmod);
       next if $diff->is_zero; # already fixed
     }
     fix_file($fn, $info->{dt}->strftime('%F %T %z'));
@@ -94,11 +95,11 @@ sub fix_file {
   my $txt = slurp($fn);
   $txt =~ s{\A(---\n.*?^---\n)}{}sm or die "No frontmatter in $fn";
   my ($frontmatter) = $1;
-  my $new_date = "date: $dt\n";
-  if ($frontmatter =~ s{^date:.*\n}{$new_date}m) {
+  my $new_lastmod = "$FIELD: $dt\n";
+  if ($frontmatter =~ s{^$FIELD:.*\n}{$new_lastmod}m) {
     # done
   } else {
-    $frontmatter =~ s{---\n$}{$new_date---\n};
+    $frontmatter =~ s{---\n$}{$new_lastmod---\n};
   }
   write_file($fn, {atomic => 1}, $frontmatter, $txt);
   return ();
