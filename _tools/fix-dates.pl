@@ -21,6 +21,7 @@ sub main {
   die "No log output?" unless @log;
 
   my %file; # key = relative_path, value = \%info
+  my $HEAD;
   my $lastci; # \%commit_info
   while (@log) {
     my $ln = shift @log;
@@ -34,6 +35,7 @@ sub main {
       $lastci->{ln} = $ln;
     } elsif ($ln eq '') {
       # end commit
+      $HEAD = $lastci if $lastci->{deco} && $lastci->{deco} =~ /\bHEAD\b/;
       undef $lastci;
     } elsif (my ($op, $fn) = $ln =~ m{^([AMD])\t(.*)$}) {
       # file - keep first (most recent) entry per file
@@ -48,7 +50,7 @@ sub main {
     }
   }
 
-  my @modified; # ($fn, ...)
+  my (@modified, @head_mod); # ($fn, ...)
   while (my ($fn, $info) = each %file) {
     if ($info eq 'del') {
       delete $file{$fn}; # for clean debug dump
@@ -67,17 +69,30 @@ sub main {
       next if $diff->is_zero; # already fixed
     }
     fix_file($fn, $info->{dt}->strftime('%F %T %z'));
-    push @modified, $fn;
+    if ($info == $HEAD) {
+      push @head_mod, $fn;
+    } else {
+      push @modified, $fn;
+    }
   }
 
-#  use Data::Dumper; print Data::Dumper->Dump([\%file], ['file']);
-  print map{"$_\n"} @modified;
+  run_cmd(qw( git commit --amend -CHEAD --date ), $HEAD->{time}, @head_mod)
+    if @head_mod;
+
+  run_cmd(qw( git commit -m ), $AUTO_MARK, @modified)
+    if @modified;
 
   return 0;
 }
 
 exit main();
 
+sub run_cmd {
+  my (@cmd) = @_;
+  print "> @cmd\n";
+  system(@cmd) and die "@cmd: failed, exit code $?";
+  return;
+}
 
 sub peek {
   my ($fn) = @_;
