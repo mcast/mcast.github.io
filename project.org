@@ -1,0 +1,48 @@
+
+* config
+#+STARTUP: showall hidestars
+#+PRIORITIES: A Z N
+
+* [0/7] feature requests
+An unordered list.  Another one.  Not referenced from anywhere else.
+(Three problems with this file.)
+
++ [ ] tests
+  + [ ] TODO & WiP lister
+  + [ ] dangling internal links (wanted page)
+  + [ ] frontmatter variables not in my list (currently below)
++ [ ] website-wants/jekyll02.md
++ [ ] vapourware queue
++ [ ] Old content
+  + [ ] Move it
+  + [ ] Redirections
++ [ ] HAML
+  + [ ] "Give myself 5 minutes" to learn it.
+  + [ ] Shoe-horn it into Jekyll?
++ [ ] Ask ghpages for org-mode support
+  + might pay to benchmark the implementation first
++ [ ] HTTP Last-Modified: time to match sitemap.xml
+
+* Variables
++ http://jekyllrb.com/docs/variables/
+
+** Frontmatter
++ Jekyll
+  + title :: text
+  + published :: true, false
+  + date :: ISO8601ish
+  + tags / tag (?)
+  + categories / category (?)
+  + layout :: base, post, page
++ jekyll-redirect-from
+  + permalink (?)
++ jekyll-sitemap
+  1) last_modified_at
+  2) date
+
+** _config
+(would be a docs duplication => WIBNI plugins had a standard list in a standard place)
+
+** Supplied variables
++ (github pages)
+  + site.github
