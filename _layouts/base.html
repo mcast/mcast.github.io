@@ -20,6 +20,14 @@ div.box-wip {
   border-radius: 10px;
   -khtml-border-radius: 10px;
 }
+
+blockquote {
+  border-left: 3px blue solid;
+  margin: 0 2.5em 2.5ex 0;
+  padding-left: 2ex;
+}
+p + blockquote { margin-top: -1.5ex } /* Put blockquotes closer to preceding p */
+
 </style>
 </head><body>
 {{ content }}
