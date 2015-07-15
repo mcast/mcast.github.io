@@ -1,4 +1,5 @@
 ---
+url: http://mcra.t8o.org
 # baseurl: /web.mcra  # for mcast.github.io/web.mcra/ but not http://mcra.t8o.org/
 timezone: GB
 defaults:
