@@ -28,7 +28,10 @@ blockquote {
 }
 p + blockquote { margin-top: -1.5ex } /* Put blockquotes closer to preceding p */
 
+div.copyright { border-top: 2px grey solid; margin: 2em }
 </style>
 </head><body>
-{{ content }}
+{{ content }}{% if page.copyright %}<div class="copyright">
+  {% include copyright.{{ page.copyright }}.html %}
+</div>{% endif %}
 </body></html>

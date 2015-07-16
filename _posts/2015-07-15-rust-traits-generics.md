@@ -1,7 +1,12 @@
 ---
 title: I receive a lesson on Rust traits and generics
 tags: rust-lang
+copyright: CC0-quoting
+last_modified_at: 2015-07-16 08:58:49 +0100
 ---
+
+On how to hold trait objects, and how generics can confuse a Perl hacker.
+TL;DR?  [Summary below](#summary)
 
 Text from the fine folks at [#rust irc.mozilla.org 2015-07-13](https://botbot.me/mozilla/rust/2015-07-13/), edited for format, brevity, hyperlinks and ordering.
 
@@ -222,3 +227,5 @@ bluss:
 mcast:
 
 > ok, thanks - that is what I was trying to do.  Put in a `File` or some `#[test] vec!`, and suck out some `MarkdownEle`
+
+---
