@@ -1,8 +1,8 @@
 ---
 title: I receive a lesson on Rust traits and generics
-tags: rust-lang
+tags: rust-lang broken-things-fixed
 copyright: CC0-quoting
-last_modified_at: 2015-07-16 08:58:49 +0100
+last_modified_at: 2015-07-16 20:06:58 +0100
 ---
 
 On how to hold trait objects, and how generics can confuse a Perl hacker.
@@ -80,7 +80,7 @@ bluss:
 
 mcast:
 
-> hmm, boxing works for this example <http://is.gd/mtzZG8>[^boxiter] (even on stable, where I am) <i> [ but stable then was 1.1.0, and I had been using 1.0.0 for my tests ] </i>
+> hmm, boxing works for this example <http://is.gd/mtzZG8> [^boxiter] (even on stable, where I am) <i> [ but stable then was 1.1.0, and I had been using 1.0.0 for my tests ] </i>
 
 bluss:
 
@@ -115,7 +115,9 @@ bluss:
 
 mcast:
 
-> the earlier one, where I was getting (apparent) tautologies <https://github.com/mcast/markdown-chapterise/commit/5b48c728>
+> the earlier one, where I was getting (apparent) tautologies <https://github.com/mcast/markdown-chapterise/commit/5b48c728> [^fixed]
+
+[^fixed]: Smallest change I found to make it compile, plus the compiler output before and after, are on <https://github.com/mcast/markdown-chapterise/commit/ca95e77d>.
 
 bluss:
 
@@ -128,8 +130,8 @@ bluss:
 
 bluss:
 
-> ok first just two functions that add together things <http://is.gd/SLlk3a>[^addf]
-> your example is like changing the function `g` to this <http://is.gd/TdKXL0>[^addg]
+> ok first just two functions that add together things <http://is.gd/SLlk3a> [^addf]
+> your example is like changing the function `g` to this <http://is.gd/TdKXL0> [^addg]
 > `0` is of a type (say `i32`) and it implements addition just fine but we can't return `0` from function `g`, we promised to return type `T`.  In effect a generic type parameter is *user chosen* regardless if it is used in input function arguments or just in *input* type parameters.
 
 [^addf]:
@@ -180,7 +182,9 @@ but `i32` is not `T`.
 
 ### My code with the original problem
 
-There are several versions of this in the commit history alone, but I collected [`mdslurp.rs` and `mdstream.rs`](https://github.com/mcast/markdown-chapterise/commit/5b48c728) to <https://gist.github.com/anonymous/862e0f810673d396e516> == <https://play.rust-lang.org/?gist=862e0f810673d396e516&version=stable>.  The first error is what surprised me,
+There are several versions of this in the commit history alone, but I collected [`mdslurp.rs` and `mdstream.rs`](https://github.com/mcast/markdown-chapterise/commit/5b48c728) [^fixed] to <https://gist.github.com/anonymous/862e0f810673d396e516> == <https://play.rust-lang.org/?gist=862e0f810673d396e516&version=stable>.
+
+This first error is what surprised me,
 
 ~~~ console
 $ cargo test
