@@ -19,13 +19,13 @@ Well this isn't an introspection post, it's a method idea post:
     * Sure I need to deal with them one day...
 
 
-[^1]: I use [mutt]http://www.mutt.org/) for this.  (See also [the manual](http://www.mutt.org/doc/manual/manual-6.html#sort_aux))
+[^1]: I use [mutt](http://www.mutt.org/) for this.  (See also [the manual](http://www.mutt.org/doc/manual/manual-6.html#sort_aux))
 
-```
-set sort=threads
-set sort_aux=last-date-received
-```
+	```
+	set sort=threads
+	set sort_aux=last-date-received
+	```
 
-This avoids the problem of getting a new mail on an old thread, and not seeing it; also solved by actually reaching Inbox Zero!
+	This avoids the problem of getting a new mail on an old thread, and not seeing it; also solved by actually reaching Inbox Zero!
 
 ---
