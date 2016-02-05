@@ -2,7 +2,7 @@
 title: Virtual Inbox Zero
 tags: inbox-zero lifehacks
 copyright: CC0
-last_modified_at: 2016-02-03 17:29:29 +0000
+last_modified_at: 2016-02-05 09:07:46 +0000
 ---
 
 The idea of [Inbox Zero](http://www.43folders.com/izero) really appeals to me.  There are [many variations](https://duckduckgo.com/?q=inbox+zero), but...  it [can go wrong](http://www.newyorker.com/culture/culture-desk/zero-dark-inbox) and I'm not there yet.  What does this mean for me?
@@ -17,6 +17,7 @@ Well this isn't an introspection post, it's a method idea post:
     * They aren't growing.
     * They are still visible, scrollbar permitting.
     * Sure I need to deal with them one day...
+5. The difference ( number in the divider's subject ) minus ( its current message number ) is profit!
 
 
 [^1]: I use [mutt](http://www.mutt.org/) for this.  (See also [the manual](http://www.mutt.org/doc/manual/manual-6.html#sort_aux))
