@@ -54,6 +54,8 @@ bob@bobsbox:~$
 
 ## See also
 
-I also wrote and use [psst (Prompt String Setting Tool)](https://github.com/mcast/psst), a low-overhead tool to tell me when `$PERL_LOCAL_LIB_ROOT` is set for [local::lib](https://metacpan.org/pod/local::lib).
+* I also wrote and use [psst (Prompt String Setting Tool)](https://github.com/mcast/psst), a low-overhead tool to tell me when `$PERL_LOCAL_LIB_ROOT` is set for [local::lib](https://metacpan.org/pod/local::lib).
+* Bash manual, [Controlling the Prompt](https://www.gnu.org/software/bash/manual/html_node/Controlling-the-Prompt.html)
+* [Custom Bash prompt is overwriting itself](http://stackoverflow.com/a/19501528)
 
 ---
