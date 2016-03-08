@@ -2,7 +2,7 @@
 title: Exit code display in Bash prompt
 tags: lifehacks
 copyright: CC0
-last_modified_at: 2016-03-08 10:51:08 +0000
+last_modified_at: 2016-03-08 12:00:27 +0000
 ---
 
 ## The normal Bash prompt
@@ -45,12 +45,12 @@ bob@bobsbox:~$
 It can even take a splash of colour,
 
 ```bash
-bob@bobsbox:~$ PS1='\e[31m${?/#0/\e[00m\u}@\e[00m\h:\w\$ '
+bob@bobsbox:~$ PS1='\[\e[31m\]${?/#0/\[\e[00m\]\u}@\h\[\e[00m\]:\w\$ '
 bob@bobsbox:~$ false
 1@bobsbox:~$ true
 bob@bobsbox:~$ 
 ```
-...though how I convince Markdown to render the red `1@` in a fenced code block is mystery for another day.
+...though how I convince Markdown to render the red `1@bobsbox` in a fenced code block is mystery for another day.
 
 ## See also
 
