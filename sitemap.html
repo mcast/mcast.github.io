@@ -3,16 +3,20 @@ layout: base
 title: List all pages
 ---
 
-<div>
+<main class="grid-container">
   <h1>{{ page.title }}</h1>
   <p> List of all generated pages on the site.  (Excluding content which doesn't have the YAML frontmatter marks.) </p>
-  <h2>Posts</h2>
+
+  <div class="grid-33"><h2>Posts</h2>
   {% include ul--posts.html %}
+  </div>
 
-  <h2>Pages</h2>
+  <div class="grid-33"><h2>Pages</h2>
   {% include ul--pages.html %}
+  </div>
 
-  <h2> Categories and Tags </h2>
+  <div class="grid-33"><h2> Categories and Tags </h2>
   {% include div-WiP.html %}
   Not yet indexed.
-</div>
+  </div>
+</main>

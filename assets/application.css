@@ -22,4 +22,6 @@ blockquote {
 }
 p + blockquote { margin-top: -1.5ex } /* Put blockquotes closer to preceding p */
 
-div.copyright { border-top: 2px grey solid; margin: 2em }
+div.footer { border-top: 2px grey solid; margin-top: 2em }
+div.copyright   { color: grey }
+div.copyright a { color: grey }

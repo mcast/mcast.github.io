@@ -4,9 +4,14 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
   <title>{{ page.title }}</title>
+
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/unsemantic-grid-responsive.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/application.css"/>
 </head><body>
-{{ content }}{% if page.copyright %}<div class="copyright">
+{{ content }}{% if page.copyright %}<div class="grid-container footer">
+<div class="copyright grid-90 push-10">
   {% include copyright.{{ page.copyright }}.html %}
-</div>{% endif %}
+</div></div>{% endif %}
 </body></html>
