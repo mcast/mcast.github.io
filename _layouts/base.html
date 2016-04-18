@@ -3,33 +3,7 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
 <title>{{ page.title }}</title>
-<style type="text/css">
-div.box-wip {
-  border-color: orange;
-  padding: 2em;
-  background-color: #ffc880;
-}
-
-.divbox { /* for div.divbox, but lower priority */
-  border-width: 3px;
-  border-style: solid;
-  margin: 0.5ex;
-  padding: 0.5ex;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  -khtml-border-radius: 10px;
-}
-
-blockquote {
-  border-left: 3px blue solid;
-  margin: 0 2.5em 2.5ex 0;
-  padding-left: 2ex;
-}
-p + blockquote { margin-top: -1.5ex } /* Put blockquotes closer to preceding p */
-
-div.copyright { border-top: 2px grey solid; margin: 2em }
-</style>
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/application.css"/>
 </head><body>
 {{ content }}{% if page.copyright %}<div class="copyright">
   {% include copyright.{{ page.copyright }}.html %}
