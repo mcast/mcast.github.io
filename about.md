@@ -12,7 +12,7 @@ See also [the README](/README.html).
 
 In no particular order,
 
-* [my old website](http://www.t8o.org/~mca1001)
+* [My old website](http://www.t8o.org/~mca1001).  It looks as dead as a brown crinkly potplant, but it may turn green again one day.
 * <https://gitlab.com/mcast>
 * <https://github.com/mcast>, formerly known[^emp-name] as ~~<https://github.com/mca-wtsi>~~
 * <http://sourceforge.net/users/mca1001>, formerly known[^emp-name] as <http://sourceforge.net/u/mca-gdl/profile/>
