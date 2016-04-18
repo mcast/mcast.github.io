@@ -1,9 +1,17 @@
 ---
 layout: base
 ---
-<div style="float: right"> <h2> Pages </h2> {% include ul--pages.html %} </div>
-<div class="page">
-  {{ content }}
-</div>
+<div class="grid-container">
+
+<main class="grid-75 page">
+{{ content }}
+
 {% include ul--categories.html %}
 {% include ul--tags.html %}
+</main>
+<div class="grid-25">
+  <h2> Pages </h2>
+  {% include ul--pages.html %}
+</div>
+
+</div>
