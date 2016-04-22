@@ -1,3 +1,12 @@
-{% if page.tags %}
-<div class="tags-list"> Tags: [ {{page.tags | join: '|' }} ] </div>
+{% assign numtags = include.taglist | size %}
+{% if numtags > 0 %}
+  <div class="tags-list">
+  {% if include.pre %}
+    {% if numtags == 1 %} Tag: {% else %} Tags: {% endif %}
+  {% endif %}
+  {% for tagname in include.taglist %}
+    <a href="{{ site.baseurl }}/sitemap.html#t--{{ tagname | slugify }}">{{ tagname }} ({{ site.tags[tagname] | size }})</a>
+  {% endfor %}
+  {% if include.pre %}.{% endif %}
+  </div>
 {% endif %}

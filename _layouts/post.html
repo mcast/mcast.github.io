@@ -6,12 +6,12 @@ layout: base
 <main class="grid-75 post">
   <h1>{{ page.title }}</h1>
 {{ content }}
-{% include ul--categories.html %}
-{% include ul--tags.html %}
+{% include ul--categories.html catlist=page.categories pre=1 %}
+{% include ul--tags.html       taglist=page.tags       pre=1 %}
 </main>
 <div class="grid-25">
   <h2> Posts </h2>
-  {% include ul--posts.html %}
+  {% include ul--posts.html posts=site.posts %}
 </div>
 
 </div>

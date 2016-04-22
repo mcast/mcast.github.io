@@ -1,3 +1,13 @@
-{% if page.categories %}
-<div class="cats-list"> Categories: [ {{page.categories | join: '|' }} ] </div>
+{% assign numcats = include.catlist | size %}
+{% if numcats > 0 %}
+  <!-- ul class="wordlist" -->
+  <div class="cats-list">
+  {% if include.pre %}
+    {% if numcats == 1 %} Category: {% else %} Categories: {% endif %}
+  {% endif %}
+  {% for catname in include.catlist %}
+    <a href="{{ site.baseurl }}/sitemap.html#cat--{{ catname | slugify }}">{{ catname }}</a>
+  {% endfor %}
+  {% if include.pre %}.{% endif %}
+  </div>
 {% endif %}
