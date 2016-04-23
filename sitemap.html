@@ -7,11 +7,45 @@ title: List all pages
   <h1>{{ page.title }}</h1>
   <p> List of all generated pages on the site.  (Excluding content which doesn't have the YAML frontmatter marks.) </p>
 
-  <div class="grid-33"><h2>Posts</h2>
+  <div class="grid-50"><h2>Posts</h2>
   {% include ul--posts.html posts=site.posts %}
+
+  <h3> Categories </h3>
+  {% assign catlist = '' | split: '.' %}
+  {% for cat in site.categories %}
+    {% assign catname = cat | first %}
+    {% assign catlist = catlist | push: catname %}
+  {% endfor %}
+  {% assign catlist = catlist | sort %}
+  {% include ul--categories.html catlist=catlist all=site.categories %}
+
+  {% for cat in site.categories %}
+    {% assign catname = cat | first %}
+    <div id="cat--{{ catname | slugify }}" class="match-target-show">
+      {% assign catposts = site.categories[catname] %}
+      {% include ul--posts.html posts=catposts %}
+    </div>
+  {% endfor %}
+
+  <h3> Tags </h3>
+  {% assign taglist = '' | split: '.' %}
+  {% for tag in site.tags %}
+    {% assign tagname = tag | first %}
+    {% assign taglist = taglist | push: tagname %}
+  {% endfor %}
+  {% assign taglist = taglist | sort %}
+  {% include ul--tags.html taglist=taglist %}
+
+  {% for tag in site.tags %}
+    {% assign tagname = tag | first %}
+    <div id="t--{{ tagname | slugify }}" class="match-target-show">
+      {% assign tagposts = site.tags[tagname] %}
+      {% include ul--posts.html posts=tagposts %}
+    </div>
+  {% endfor %}
   </div>
 
-  <div class="grid-33"><h2>Pages</h2>
+  <div class="grid-50"><h2>Pages</h2>
   {% include ul--pages.html %}
 
   <h3> Other stuff </h3>
@@ -21,10 +55,5 @@ title: List all pages
     <li> <a href="{{ site.baseurl }}/sitemap.xml"> /sitemap.xml </a> </li>
     <li> <a href="{{ site.baseurl }}/CNAME"> /CNAME </a> </li>
   </ul>
-  </div>
-
-  <div class="grid-33"><h2> Categories and Tags </h2>
-  {% include div-WiP.html %}
-  Not yet indexed.
   </div>
 </main>

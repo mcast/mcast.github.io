@@ -26,6 +26,9 @@ div.footer { border-top: 2px grey solid; margin-top: 2em }
 div.copyright   { color: grey }
 div.copyright a { color: grey }
 
+.match-target-show { display: none }
+.match-target-show:target { display: block }
+
 pre.debug:before {
     content: "Debug dump";
     display: block;
