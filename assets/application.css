@@ -25,3 +25,18 @@ p + blockquote { margin-top: -1.5ex } /* Put blockquotes closer to preceding p *
 div.footer { border-top: 2px grey solid; margin-top: 2em }
 div.copyright   { color: grey }
 div.copyright a { color: grey }
+
+pre.debug:before {
+    content: "Debug dump";
+    display: block;
+    border: thick red solid;
+    border-radius: 1em;
+    border-bottom: none;
+    padding: 1ex;
+}
+pre.debug {
+    border: thin red solid;
+    border-top: none;
+    border-radius: 1em;
+    white-space: pre-wrap;
+ }
