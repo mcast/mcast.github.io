@@ -28,6 +28,7 @@ div.copyright a { color: grey }
 
 .match-target-show { display: none }
 .match-target-show:target { display: block }
+.match-target-show:target ~ .match-target-show-default { display: none }
 
 pre.debug:before {
     content: "Debug dump";
