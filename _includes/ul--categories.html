@@ -7,6 +7,7 @@
   {% endif %}
   {% for catname in include.catlist %}
     <a href="{{ site.baseurl }}/sitemap.html#cat--{{ catname | slugify }}">{{ catname }}</a>
+    {% unless forloop.last %} · {% endunless %}
   {% endfor %}
   {% if include.pre %}.{% endif %}
   </div>

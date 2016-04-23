@@ -6,6 +6,7 @@
   {% endif %}
   {% for tagname in include.taglist %}
     <a href="{{ site.baseurl }}/sitemap.html#t--{{ tagname | slugify }}">{{ tagname }} ({{ site.tags[tagname] | size }})</a>
+    {% unless forloop.last %} · {% endunless %}
   {% endfor %}
   {% if include.pre %}.{% endif %}
   </div>
