@@ -32,6 +32,12 @@ title: List all pages
       {% include ul--posts.html posts=site.posts %}
     </div>
 
+    <div id="test-no-css3" class="lack-css3 warning">
+      <h3> Breakage below </h3>
+      This category and tag displayer relies on CSS3 pseudo-selectors,
+      which this browser doesn't seem to understand.
+    </div>
+
     <h3> Categories </h3>
   {% assign catlist = '' | split: '.' %}
   {% for cat in site.categories %}

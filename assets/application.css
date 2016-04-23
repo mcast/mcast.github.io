@@ -26,6 +26,15 @@ div.footer { border-top: 2px grey solid; margin-top: 2em }
 div.copyright   { color: grey }
 div.copyright a { color: grey }
 
+.lack-css3 { display: block }
+.lack-css3:not(:target) { display: none }
+
+.warning {
+    border: thick orange solid;
+    border-radius: 1em;
+    padding: 1em;
+}
+
 .match-target-show { display: none }
 .match-target-show:target { display: block }
 .match-target-show:target ~ .match-target-show-default { display: none }
