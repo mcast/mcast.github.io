@@ -39,17 +39,18 @@ div.copyright a { color: grey }
 .match-target-show:target { display: block }
 .match-target-show:target ~ .match-target-show-default { display: none }
 
-pre.debug:before {
-    content: "Debug dump";
+.debug b {
     display: block;
     border: thick red solid;
     border-radius: 1em;
     border-bottom: none;
     padding: 1ex;
 }
-pre.debug {
+.debug {
     border: thin red solid;
     border-top: none;
     border-radius: 1em;
+}
+.debug pre {
     white-space: pre-wrap;
- }
+}
