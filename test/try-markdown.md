@@ -2,7 +2,6 @@
 title: Try Markdown
 layout: page
 category: test silly everything
-tags: sillier test
 published: true
 date: 2015-06-28
 permalink: xmastree-post.html

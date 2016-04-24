@@ -5,7 +5,7 @@
     {% if numtags == 1 %} Tag: {% else %} Tags: {% endif %}
   {% endif %}
   {% for tagname in include.taglist %}
-    <a href="{{ site.baseurl }}/sitemap.html#t--{{ tagname | slugify }}">{{ tagname }} ({{ site.tags[tagname] | size }})</a>
+    <a href="{{ site.baseurl }}/sitemap.html#t--{{ tagname | slugify }}" class="post-tag">{{ tagname | escape }} ({{ site.tags[tagname] | size }})</a>
     {% unless forloop.last %} · {% endunless %}
   {% endfor %}
   {% if include.pre %}.{% endif %}

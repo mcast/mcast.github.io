@@ -35,6 +35,16 @@ div.copyright a { color: grey }
     padding: 1em;
 }
 
+
+.post-tag, .page-tag {
+    border: thin #888 solid;
+    border-radius: 0.5ex;
+    padding: 0 0.5ex;
+    white-space: nowrap;
+}
+.post-tag { background: #ddd }
+.page-tag { background: #fdd }
+
 .match-target-show { display: none }
 .match-target-show:target { display: block }
 .match-target-show:target ~ .match-target-show-default { display: none }
