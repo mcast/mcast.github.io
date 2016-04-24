@@ -5,7 +5,7 @@ title: List all pages
 
 <main class="grid-container">
   <h1>{{ page.title }}</h1>
-  <p> List of all generated pages on the site.  (Excluding content which doesn't have the YAML frontmatter marks.) </p>
+  <p> List of Posts, Pages and Other Files on the site. </p>
 
   <div class="grid-50">
   {% for cat in site.categories %}
@@ -60,12 +60,12 @@ title: List all pages
   <div class="grid-50"><h2>All Pages</h2>
   {% include ul--pages.html %}
 
-  <h3> Other stuff </h3>
+  <h3> Other Files </h3>
   <ul>
-    <li> <a href="{{ site.baseurl }}/humans.txt"> /humans.txt </a> </li>
-    <li> <a href="{{ site.baseurl }}/robots.txt"> /robots.txt </a> </li>
-    <li> <a href="{{ site.baseurl }}/sitemap.xml"> /sitemap.xml </a> </li>
-    <li> <a href="{{ site.baseurl }}/CNAME"> /CNAME </a> </li>
+    {% for f in site.static_files %}
+    <li><a href="{{ site.baseurl }}{{ f.path }}"> {{ f.path | remove_first: '/' | escape }} </a></li>
+    {% endfor %}
+    <li><a href="{{ site.baseurl }}/sitemap.xml">sitemap.xml</a> (from <a href="https://github.com/jekyll/jekyll-sitemap">jekyll-sitemap</a> plugin)</li>
   </ul>
   </div>
 </main>
