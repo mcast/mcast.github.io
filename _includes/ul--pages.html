@@ -1,5 +1,7 @@
 <ul class="pages">
-  {% for page in site.pages %}
-    <li> &raquo; <a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></li>
+  {% for page in include.pages %}
+  <li> &raquo; <a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
+    {% if page.url == '/' %}(the home page){% endif %}
+  </li>
   {% endfor %}
 </ul>

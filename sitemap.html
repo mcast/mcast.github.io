@@ -57,8 +57,24 @@ title: List all pages
   {% include ul--tags.html taglist=taglist %}
   </div>
 
+
   <div class="grid-50"><h2>All Pages</h2>
-  {% include ul--pages.html %}
+
+    {% assign pg_cats = '' | split: '.' %}
+    {% for p in site.pages %}
+      {% assign catpath = p.categories | join: '/' %}
+      {% include mkhash.inc catpath = catpath page = p %}
+      {% assign pg_cats = pg_cats | push: h %}
+    {% endfor %}
+    {% assign pg_cats_grouped = pg_cats | group_by: "catpath" %}
+    {% assign cats = pg_cats_grouped | map: "name" | sort %}
+    {% for cat in cats %}
+      {% if cat != "" %}
+      <h3> {{ cat | escape }}</h3>
+      {% endif %}
+      {% assign pages = pg_cats_grouped | where: "name", cat | map: "items" | map: "page" %}
+      {% include ul--pages.html pages = pages %}
+    {% endfor %}
 
   <h3> Other Files </h3>
   <ul>
