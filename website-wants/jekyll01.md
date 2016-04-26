@@ -14,6 +14,6 @@ Things I added already
 * README.md
 	* For the [Github repo view](https://github.com/mcast/mcast.github.io#readme)
 	* Also appearing in the [published view](/README.html), unless you mark it unpublished
-* Policy on [URL changes](http://www.w3.org/Provider/Style/URI.html).
+* Policy on [URL changes](http://www.w3.org/Provider/Style/URI.html), in the [README](/README.html#policies)
 
 though some of these start with a "work in progress" mark.

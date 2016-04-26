@@ -21,6 +21,7 @@ I would appreciate attribution via hyperlink, but I think such creations are too
 You may for the purposes of conversation quote chunks of my opinions or statements from this site, if you mark it up as such.  Please let me know if you suspect I might want to reply.
 
 Larger works and other repositories should have their own copyright statements on them.
+Wholesale copying is not permitted because I don't want to feed the [splog monster](https://en.wikipedia.org/wiki/Splog).
 
 You will have other rights of copying that I haven't bothered to outline here.
 
