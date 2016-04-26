@@ -3,8 +3,16 @@ layout: base
 ---
 <div class="grid-container">
 
-<main class="grid-75 page">
+<main class="grid-75 page grid-container">
 {{ content }}
+  <div class="grid-66 post-footer">
+{% include ul--categories.html catlist=page.categories pre=1 %}
+  </div>
+  {% if page.last_modified_at != null %}
+    <div class="grid-33 post-footer">
+      {% include date.html label='Updated' d=page.last_modified_at %}
+    </div>
+  {% endif %}
 </main>
 <div class="grid-25">
   <h2> Pages </h2>

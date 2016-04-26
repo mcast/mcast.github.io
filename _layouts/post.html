@@ -3,11 +3,28 @@ layout: base
 ---
 <div class="grid-container">
 
-<main class="grid-75 post">
+<main class="grid-75 post grid-container">
   <h1>{{ page.title }}</h1>
 {{ content }}
+  <div class="grid-66 post-footer">
 {% include ul--categories.html catlist=page.categories pre=1 %}
 {% include ul--tags.html       taglist=page.tags       pre=1 %}
+  </div>
+  <div class="grid-33 post-footer">
+    {% assign pagedate = page.date               | date_to_string %}
+    {% if page.last_modified_at != null %}
+      {% assign  moddate = page.last_modified_at | date_to_string %}
+    {% endif %}
+    {% case moddate %}
+      {% when null %}
+	{% include date.html label='Posted'  d=page.date %}
+      {% when pagedate %}
+	{% include date.html label='Posted'  d=page.date %}
+      {% else %}
+	{% include date.html label='Posted'  d=page.date %}<br>
+	{% include date.html label='Updated' d=page.last_modified_at %}
+    {% endcase %}
+  </div>
 </main>
 <div class="grid-25">
   <h2> Posts </h2>
