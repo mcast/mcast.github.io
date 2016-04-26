@@ -6,7 +6,7 @@
     {% if numcats == 1 %} Category: {% else %} Categories: {% endif %}
   {% endif %}
   {% for catname in include.catlist %}
-    <a href="{{ site.baseurl }}/sitemap.html#cat--{{ catname | slugify }}">{{ catname }}</a>
+    <a href="{{ site.baseurl }}/sitemap.html#cat--{{ catname | slugify | escape }}">{{ catname | escape }}</a>
     {% unless forloop.last %} · {% endunless %}
   {% endfor %}
   {% if include.pre %}.{% endif %}

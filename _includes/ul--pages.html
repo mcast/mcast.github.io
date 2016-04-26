@@ -1,7 +1,6 @@
 <ul class="pages">
   {% for page in include.pages %}
-  <li><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
-    {% if page.url == '/' %}(the home page){% endif %}
+  <li><a href="{{ site.baseurl }}{{ page.url | escape }}">{% if page.alt_title == null %}{{ page.title | escape }}{% else %}{{ page.alt_title | escape }}{% endif %}</a>
     {% for tag in page.tags %}
     <span class="page-tag">{{ tag | escape }}</span>
     {% unless forloop.last %} · {% endunless %}

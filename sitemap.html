@@ -4,14 +4,14 @@ title: List all pages
 ---
 
 <main class="grid-container">
-  <h1>{{ page.title }}</h1>
+  <h1>{{ page.title | escape }}</h1>
   <p> List of Posts, Pages and Other Files on the site. </p>
 
   <div class="grid-50">
   {% for cat in site.categories %}
     {% assign catname = cat | first %}
-    <div id="cat--{{ catname | slugify }}" class="match-target-show">
-      <h2>Posts under category {{catname}}</h2>
+    <div id="cat--{{ catname | slugify | escape }}" class="match-target-show">
+      <h2>Posts under category {{catname | escape }}</h2>
       <a href="#"> Show all </a>
       {% assign catposts = site.categories[catname] %}
       {% include ul--posts.html posts=catposts %}
@@ -20,8 +20,8 @@ title: List all pages
 
   {% for tag in site.tags %}
     {% assign tagname = tag | first %}
-    <div id="t--{{ tagname | slugify }}" class="match-target-show">
-      <h2>Posts with tag {{tagname}}</h2>
+    <div id="t--{{ tagname | slugify | escape }}" class="match-target-show">
+      <h2>Posts with tag {{ tagname | escape }}</h2>
       <a href="#"> Show all </a>
       {% assign tagposts = site.tags[tagname] %}
       {% include ul--posts.html posts=tagposts %}
@@ -79,7 +79,7 @@ title: List all pages
   <h3> Other Files </h3>
   <ul class="pages">
     {% for f in site.static_files %}
-    <li><a href="{{ site.baseurl }}{{ f.path }}"> {{ f.path | remove_first: '/' | escape }} </a></li>
+    <li><a href="{{ site.baseurl }}{{ f.path | escape }}"> {{ f.path | remove_first: '/' | escape }} </a></li>
     {% endfor %}
     <li><a href="{{ site.baseurl }}/sitemap.xml">sitemap.xml</a> (from <a href="https://github.com/jekyll/jekyll-sitemap">jekyll-sitemap</a> plugin)</li>
   </ul>
