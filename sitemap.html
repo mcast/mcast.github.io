@@ -12,7 +12,7 @@ title: List all pages
     {% assign catname = cat | first %}
     <div id="cat--{{ catname | slugify | escape }}" class="match-target-show">
       <h2>Posts under category {{catname | escape }}</h2>
-      <a href="#"> Show all </a>
+      <a href="#all"> Show all </a>
       {% assign catposts = site.categories[catname] %}
       {% include ul--posts.html posts=catposts %}
     </div>
@@ -22,13 +22,13 @@ title: List all pages
     {% assign tagname = tag | first %}
     <div id="t--{{ tagname | slugify | escape }}" class="match-target-show">
       <h2>Posts with tag {{ tagname | escape }}</h2>
-      <a href="#"> Show all </a>
+      <a href="#all"> Show all </a>
       {% assign tagposts = site.tags[tagname] %}
       {% include ul--posts.html posts=tagposts %}
     </div>
   {% endfor %}
     <div class="match-target-show-default">
-      <h2>All Posts</h2>
+      <h2 id="all">All Posts</h2>
       {% include ul--posts.html posts=site.posts %}
     </div>
 

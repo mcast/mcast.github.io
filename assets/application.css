@@ -69,3 +69,6 @@ ul.pages li, ul.posts li { list-style-type: none }
 .debug pre {
     white-space: pre-wrap;
 }
+
+h1:target, h2:target, h3:target, h4:target, h5:target, h6:target,
+a:target { outline: thick yellow solid }
