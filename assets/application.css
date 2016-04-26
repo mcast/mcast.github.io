@@ -36,6 +36,10 @@ div.copyright a { color: grey }
 }
 
 
+ul.pages, ul.posts { padding: 0 }
+ul.pages li:before { content: "» " }
+ul.pages li, ul.posts li { list-style-type: none }
+
 .post-tag, .page-tag {
     border: thin #888 solid;
     border-radius: 0.5ex;
@@ -48,6 +52,7 @@ div.copyright a { color: grey }
 .match-target-show { display: none }
 .match-target-show:target { display: block }
 .match-target-show:target ~ .match-target-show-default { display: none }
+
 
 .debug b {
     display: block;

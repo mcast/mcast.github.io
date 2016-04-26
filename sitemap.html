@@ -77,7 +77,7 @@ title: List all pages
     {% endfor %}
 
   <h3> Other Files </h3>
-  <ul>
+  <ul class="pages">
     {% for f in site.static_files %}
     <li><a href="{{ site.baseurl }}{{ f.path }}"> {{ f.path | remove_first: '/' | escape }} </a></li>
     {% endfor %}
