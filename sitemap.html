@@ -4,9 +4,10 @@ title: List all pages
 ---
 
 <main class="grid-container">
-  <h1>{{ page.title | escape }}</h1>
-  <p> List of Posts, Pages and Other Files on the site. </p>
-
+  <div class="grid-100">
+    <h1>{{ page.title | escape }}</h1>
+    <p> List of Posts, Pages and Other Files on the site. </p>
+  </div>
   <div class="grid-50">
   {% for cat in site.categories %}
     {% assign catname = cat | first %}

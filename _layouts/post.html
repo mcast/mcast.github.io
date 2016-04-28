@@ -6,7 +6,7 @@ layout: base
 <main class="grid-75 post grid-container">
   <h1>{{ page.title | escape }}</h1>
 {{ content }}
-  <div class="grid-66 post-footer">
+  <div class="grid-parent grid-66 post-footer">
 {% include ul--categories.html catlist=page.categories pre=1 %}
 {% include ul--tags.html       taglist=page.tags       pre=1 %}
   </div>
