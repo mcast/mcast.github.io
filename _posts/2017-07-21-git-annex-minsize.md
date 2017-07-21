@@ -47,7 +47,7 @@ I haven't made or tested settings for [`annex.largefiles`](https://git-annex.bra
 ## Are the simplifications realistic?
 
 * Using very small files like `"$n\n"` on `backend=SHA256E`
-  * These keys contain the length, which is .  For longer files, 
+  * These keys contain the length, which is single-digit (up to 6).  For longer files, more digits and more variability.
 * With no chunking or URLs?
   * `git annex` can store other things with the log, which are not tested here
 * Running the add/copy/drop operations close together in time
