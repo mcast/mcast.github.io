@@ -1,0 +1,33 @@
+
+/* Print stylesheet
+ *
+ * Help from https://onextrapixel.com/how-to-create-a-simple-print-css-for-your-site/ , thank you!
+ */
+
+/* We hide navigation things */
+div.sidebar, div.post-footer
+{
+    display: none;
+}
+
+main.post {
+    width: 100%;
+}
+
+/* Show URL */
+a:link, a:visited {
+    background: transparent;
+    color: darkgreen;
+    text-decoration: underline;
+}
+a:link[href^="http://"]:after, a[href^="http://"]:visited:after,
+a:link[href^="https://"]:after, a[href^="https://"]:visited:after
+{
+    content: "<" attr(href) ">";
+    font-size: 11px;
+    color: black;
+}
+a[href^="http://"],
+a[href^="https://"] {
+    color: blue;
+}
