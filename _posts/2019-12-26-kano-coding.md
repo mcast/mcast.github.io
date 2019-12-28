@@ -11,6 +11,20 @@ Well I hope so.  That is why I bought one as a gift - and I'm [not the first](ht
 This is my record of what I discovered before it went on its way to a new owner.
 
 
+## What is this thing?
+
+<div class="grid-container">
+ <div class="grid-50">
+   It can be a magic wand <br />
+   <img src="/assets/2019/wand-stick.jpg" width="90%" />
+ </div>
+ <div class="grid-50">
+   or a neat little bluetooth device <br />
+   <img src="/assets/2019/wand-board.jpg" width="90%" />
+ </div>
+</div>
+
+
 ## Can I talk to it from my Linux computer?
 
 I was using [Ubuntu Bionic](http://releases.ubuntu.com/18.04/).  Package names and filenames may differ on other systems or versions.
@@ -185,7 +199,8 @@ sudo setcap 'cap_net_raw,cap_net_admin+eip' $VIRTUAL_ENV/lib/python3*/*-packages
 
 ## Maybe you're wondering...?
 
-* Will I be using the wand to do something cool?  Probably not.  I like the idea of conducting some instruments with it, but I don't have the musical skills and the wand itself is Going Away soon.  I do have another BLE device to play with though.
+* Does the circuit board work without the "wand" part?  Yes it works fine, but I expect there is a greater chance of damaging the electronics physically or by [electrostatic discharge](https://en.wikipedia.org/wiki/Electrostatic-sensitive_device).
+* Will you be using the wand to do something cool?  Probably not.  I like the idea of conducting some instruments with it, but I don't have the musical skills and the wand itself is Going Away soon.  I do have another BLE device to play with though.
 * Are there alternatives to the Kano HPCW (wand)?  Maybe.  There is a [DIY project](https://hackaday.io/project/161832-kano-wand-hack) and there are 3D mouse products such as [the Air Mouse](https://www.gyration.com/products/air-mouse-mobile/) or [SkyStream Air Mouse remote](https://www.skystreamx.com/products/skystream-air-mouse-remote-1)
 * Do you understand [quaternions](https://en.wikipedia.org/wiki/Quaternion)?  Not so much.  I know they extend the complex numbers and I know where to look if I want to study them some more.
-* How long will these instructions remain valid?  That depends on how much work people put into the projects.  Sometimes code changes fast, sometimes it just sits there.
+* How long will these software instructions remain valid?  That depends on how much work people put into the projects.  Sometimes code changes fast, sometimes it just sits there.
