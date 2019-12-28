@@ -1,25 +1,33 @@
+/** Print stylesheet **/
 
-/* Print stylesheet
- *
- * Help from https://onextrapixel.com/how-to-create-a-simple-print-css-for-your-site/ , thank you!
- */
 
-/* We hide navigation things */
+/* Hide navigation things */
 div.sidebar, div.post-footer
 {
     display: none;
 }
 
+/* Unhide printable things */
+html .print-only {
+    display: block;
+}
+
+/* Bodge the grid */
 main.post {
     width: 100%;
 }
 
-/* Show URL */
+
+/* Show URL
+ *
+ * Help from https://onextrapixel.com/how-to-create-a-simple-print-css-for-your-site/ , thank you!
+ */
 a:link, a:visited {
     background: transparent;
     color: darkgreen;
     text-decoration: underline;
 }
+
 a:link[href^="http://"]:after, a[href^="http://"]:visited:after,
 a:link[href^="https://"]:after, a[href^="https://"]:visited:after
 {

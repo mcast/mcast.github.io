@@ -15,6 +15,10 @@ div.box-wip {
   -khtml-border-radius: 10px;
 }
 
+div.page-qr {
+    float: right;
+}
+
 blockquote {
   border-left: 3px blue solid;
   margin: 0 2.5em 2.5ex 0;
@@ -52,6 +56,9 @@ ul.pages li, ul.posts li { list-style-type: none }
 .match-target-show { display: none }
 .match-target-show:target { display: block }
 .match-target-show:target ~ .match-target-show-default { display: none }
+
+
+.print-only { display: none; }
 
 
 .debug b {
