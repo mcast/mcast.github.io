@@ -15,7 +15,7 @@ div.box-wip {
   -khtml-border-radius: 10px;
 }
 
-div.page-qr {
+div#page-qr {
     float: right;
 }
 
