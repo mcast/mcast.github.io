@@ -4,9 +4,7 @@ layout: base
 <div class="grid-container">
 
 <main class="grid-75 post grid-container">
-  <div class="page-qr print-only">
-    <img src="https://chart.googleapis.com/chart?chs=128x128&cht=qr&chl={{ site.url | uri_escape | escape }}{{ page.url | uri_escape | escape }}" />
-  </div>
+  {% include page-qr.html size=128 %}
   <h1>{{ page.title | escape }}</h1>
 {{ content }}
   <div class="grid-parent grid-66 post-footer">

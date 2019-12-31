@@ -4,6 +4,7 @@ layout: base
 <div class="grid-container">
 
 <main class="grid-75 page grid-container">
+{% include page-qr.html size=128 %}
 {{ content }}
   <div class="grid-container grid-66 post-footer">
 {% include ul--categories.html catlist=page.categories pre=1 %}
