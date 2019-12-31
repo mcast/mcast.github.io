@@ -2,7 +2,7 @@
 title: Exit code display in Bash prompt
 tags: lifehacks
 copyright: CC0
-last_modified_at: 2016-03-08 12:00:27 +0000
+last_modified_at: 2016-03-08 12:47:31 +0000
 ---
 
 ## The normal Bash prompt

@@ -1,6 +1,7 @@
 ---
 title: "Jekyll: make a new hash"
 tags: metablog
+last_modified_at: 2016-04-24 16:07:21 +0100
 ---
 
 I'm using

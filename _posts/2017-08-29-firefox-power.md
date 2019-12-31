@@ -2,6 +2,7 @@
 title: Firefox using over a kilowatt?
 tags: silly
 copyright: CC0
+last_modified_at: 2017-08-29 09:15:56 +0100
 ---
 
 Screenshot of PowerTOP telling me that Firefox is using 1.36 kilowatts, from 2016-04-26.

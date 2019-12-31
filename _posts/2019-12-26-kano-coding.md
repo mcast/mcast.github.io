@@ -2,6 +2,7 @@
 title: Coding for Kano Wand outside the app
 tags: code javascript toys
 copyright: CC0
+last_modified_at: 2019-12-28 23:42:20 +0000
 ---
 
 This article is for those who receive a [Kano Harry Potter Coding Wand](https://kano.me/uk/store/products/coding-wand), perhaps as a gift.  You try [the App that comes with it](https://kano.me/app) and then think "This is an interesting piece of hardware.  What else can I do with it?"

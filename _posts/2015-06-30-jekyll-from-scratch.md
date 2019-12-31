@@ -1,6 +1,7 @@
 ---
 title: Jekyll on Github Pages, from scratch
 tags: metablog
+last_modified_at: 2015-07-01 17:23:28 +0100
 ---
 ## The old solution
 

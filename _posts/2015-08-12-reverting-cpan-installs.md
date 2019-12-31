@@ -1,6 +1,7 @@
 ---
 title: Reverting CPAN installs
 tags: perl tools blogreply
+last_modified_at: 2015-08-12 10:04:48 +0100
 ---
 
 In [On Perl 5.6](http://shadow.cat/blog/matt-s-trout/on-perl-five-six/) Matt presents what I see as a nice middle ground on maintaining compatibility with old code.  No need for comment, except on this:

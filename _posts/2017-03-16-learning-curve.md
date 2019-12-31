@@ -2,6 +2,7 @@
 title: Downhill skiiing on the learning curve
 tags: lifehacks design metaphor
 copyright: CC0
+last_modified_at: 2017-03-16 10:06:17 +0000
 ---
 
 I find myself [writing](https://blueprints.launchpad.net/horizon/+spec/horizon-to-nova-hinting) "The underlying idea is that the platform pushes you up the learning curve in an optimal direction" and this seems to warrant more explanation.

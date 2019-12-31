@@ -2,7 +2,7 @@
 title: How much space in Git does a git-annex file use?
 tags: git-annex git
 copyright: CC0-quoting
-last_modified_at: 2017-07-21 22:49:58 +0100
+last_modified_at: 2017-07-21 23:55:56 +0100
 ---
 
 * When I store a file in [git annex](http://git-annex.branchable.com/), how much space does it use in the [Git](https://git-scm.com/) repository?
