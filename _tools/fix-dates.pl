@@ -5,6 +5,8 @@ use File::Slurp qw( slurp write_file );
 use DateTime;
 use DateTime::Format::DateParse;
 
+# problem: it re-updates for modification of the last_modified_at: line
+
 
 our $AUTO_MARK = '(auto) update by fix-dates.pl';
 our $FIELD = 'last_modified_at';
@@ -50,6 +52,11 @@ sub main {
     }
   }
 
+  # skip some
+  foreach my $fn (keys %file) {
+    delete $file{$fn} if $fn =~ m{^(test|assets)/|};
+  }
+
   my (@modified, @head_mod); # ($fn, ...)
   while (my ($fn, $info) = each %file) {
     if ($info eq 'del') {
@@ -81,6 +88,8 @@ sub main {
 
   run_cmd(qw( git commit -m ), $AUTO_MARK, @modified)
     if @modified;
+
+  run_cmd(qw( git log --name-status ), @head_mod ? '-3' : '-2');
 
   return 0;
 }
